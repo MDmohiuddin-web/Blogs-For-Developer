@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet"
 
 import { ModeToggle } from './theme-btn';
-// import LoadingBar from 'react-top-loading-bar';
+import LoadingBar from 'react-top-loading-bar';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -42,25 +42,25 @@ const Navbar = () => {
     }, [])
     return (
         <nav className="p-4 bg-background/50 sticky top-0 backdrop-blur border-b z-10">
-            {/* <LoadingBar
+            <LoadingBar
         color='#933ce6'
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
-      /> */}
+      />
             <div className="container mx-auto flex justify-between items-center">
                 <Link href={"/"}><div className="text-lg font-bold">
                     Code Blogs
                 </div></Link>
                 <div className="hidden md:flex space-x-4 items-center">
-                    <Link href="/" className="hover:scale-105 hover:font-semibold transition-transform duration-300"> Home
+                    <Link href="/" className="hover:scale-105 hover:font-semibold transition-all ease-out duration-500"> Home
                     </Link>
-                    <Link href="/about" className="hover:scale-105 hover:font-semibold transition-transform duration-300">
+                    <Link href="/about" className="hover:scale-105 hover:font-semibold transition-all ease-out duration-500">
                         About
                     </Link>
-                    <Link href="/blog" className="hover:scale-105 hover:font-semibold transition-transform duration-300">
+                    <Link href="/blog" className="hover:scale-105 hover:font-semibold transition-all ease-out duration-500">
                         Blog
                     </Link>
-                    <Link href="/contact" className="hover:scale-105 hover:font-semibold transition-transform duration-300">
+                    <Link href="/contact" className="hover:scale-105 hover:font-semibold transition-all ease-out duration-500">
                         Contact
                     </Link>
                     <div className='flex items-center'>
